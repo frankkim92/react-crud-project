@@ -1,38 +1,358 @@
+/* App */
 .App {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-family: 'STIX Two Math';
+} */
+
+.navbar__logo i {
+  color: var(--accent-color);
+  padding-left: 0;
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  background-color: #378ce7;
+  color: white;
+  padding: 10px;
+}
+
+.navbar__menu li {
+  padding: 8px 30px;
+}
+
+.navbar__icons {
+  list-style: none;
+  display: flex;
+  color: var(--icons-color);
+  margin: 0;
+  padding-left: 0;
+}
+
+.navbar__icons li {
+  padding: 8px 12px;
+  margin: 0;
+}
+
+/* Footer */
+.Footer {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  border-top: 1px solid #c4c4c4;
+  color: gray;
+  font-size: 12px;
+  padding: 0px 10px 1px 30px;
+  bottom: 0px;
+}
+
+.DiarySignUp {
+  margin: 0 auto;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.DiarySignUp h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.DiarySignUpContent input {
+  width: 95%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.DiarySignUpContent input:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.DiarySignUpContent input::placeholder {
+  color: #aaa;
+}
+
+.SignUpThreeButton {
+  text-align: center;
+}
+
+.DiarySignInButton {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.DiarySignInButton i {
+  position: absolute; /* 아이콘을 상대적인 위치로 설정 */
+  top: 52%; /* 부모 요소의 중앙에 위치 */
+  right: 150px; /* 원하는 위치로 조절 */
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.DiarySignInButtonForFacebook {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-color: #0056b3;
+  color: #fff;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.DiarySignInButtonForFacebook i {
+  position: absolute; /* 아이콘을 상대적인 위치로 설정 */
+  top: 55%; /* 부모 요소의 중앙에 위치 */
+  left: 105px; /* 원하는 위치로 조절 */
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.DiarySignInButtonForGoogle {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-color: #ececec;
+  color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.DiarySignInButtonForGoogle i {
+  position: absolute; /* 아이콘을 상대적인 위치로 설정 */
+  top: 55%; /* 부모 요소의 중앙에 위치 */
+  left: 105px; /* 원하는 위치로 조절 */
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.DiarySignInButtonForNaver {
+  position: relative; /* 아이콘을 상대적인 위치로 설정 */
+  width: 100%;
+  padding: 10px;
+  background-color: #1fc800;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.DiarySignInButtonForNaver i {
+  position: absolute; /* 아이콘을 상대적인 위치로 설정 */
+  top: 55%; /* 부모 요소의 중앙에 위치 */
+  left: 105px; /* 원하는 위치로 조절 */
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.DiarySignInButtonForKakao {
+  position: relative; /* 아이콘을 상대적인 위치로 설정 */
+  width: 100%;
+  padding: 10px;
+  background-color: #ffe400;
+  color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.DiarySignInButtonForKakao i {
+  position: absolute; /* 아이콘을 상대적인 위치로 설정 */
+  top: 55%; /* 부모 요소의 중앙에 위치 */
+  left: 105px; /* 원하는 위치로 조절 */
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.DiarySignInButtonForFacebook:hover {
+  background-color: black;
+}
+
+.DiarySignInButtonForGoogle:hover {
+  background: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.DiarySignInButtonForNaver:hover {
+  background: black;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.DiarySignInButtonForKakao:hover {
+  background: black;
+  color: white;
+}
+
+.DiarySignUpButton {
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.DiaryToSignInButton {
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin: 15px auto 0;
+  display: block;
+}
+
+.DiarySignInButton:hover {
+  color: #007bff;
+}
+
+.DiarySignUpButton:hover {
+  color: blue;
+}
+
+.DiaryToSignInButton:hover {
+  color: blue;
+}
+
+.DiarySignUpContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.DiaryEdit {
+  width: 100%;
+  padding: 10px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.DiaryEdit:hover {
+  /* background-color: #0056b3; */
+}
+/* editor */
+
+.DiaryEdit {
+  border: 1px solid gray;
+  text-align: center;
+  padding: 20px;
+}
+
+.DiaryEdit input,
+textarea {
+  margin-bottom: 20px;
+  width: 500px;
+}
+
+.DiaryEdit input {
+  padding: 10px;
+}
+.DiaryEdit textarea {
+  padding: 10px;
+  height: 150px;
+}
+
+.DiaryEdit select {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.DiaryEdit button {
+  width: 500px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* List  */
+
+.DiaryList {
+  border: 1px solid gray;
+  padding: 20px;
+  width: 200%;
+}
+
+.DiaryList h2 {
+  text-align: center;
+}
+
+/* ITEM */
+
+.DiaryItem {
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.DiaryItem span {
+  margin-right: 10px;
+}
+
+.DiaryItem .info {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.DiaryItem .date {
+  color: gray;
+}
+
+.DiaryItem .content {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.DiaryItem textarea {
+  padding: 10px;
+}
+
+.MyUserName {
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 5px;
+  color: blue;
+}
+
+.LogoutButton {
+  cursor: pointer;
+  padding: 20px;
+  background: Red;
 }
